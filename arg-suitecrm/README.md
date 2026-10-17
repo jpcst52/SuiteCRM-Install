@@ -17,6 +17,30 @@ SuiteCRM 8.10.2 (the current 8.10 security release) is supported on Linux with P
 
 Windows `http://localhost/` is forwarded into that Linux VM. If something on Windows already owns port 80, the site is `http://localhost:8080/` instead.
 
+The installer expects the WSL distribution to be named `Ubuntu-24.04`. It
+installs that distribution automatically if it is missing. To prepare it
+manually, open PowerShell as Administrator and run:
+
+```powershell
+wsl --update
+wsl --set-default-version 2
+
+$distro = 'Ubuntu-24.04'
+$installed = @(wsl --list --quiet | ForEach-Object { ($_ -replace "`0", '').Trim() } | Where-Object { $_ })
+if ($installed -notcontains $distro) {
+	wsl --install --distribution $distro
+	if ($LASTEXITCODE -ne 0) { throw "WSL could not install $distro. Reboot if requested, then run this block again." }
+}
+
+wsl --set-version $distro 2
+wsl --list --verbose
+```
+
+If Ubuntu asks for a Linux username and password on first launch, finish that
+one-time setup. If Windows requests a reboot while enabling WSL, reboot and
+rerun the commands. This setup creates a separate MariaDB database named
+`suitecrm`; it does not connect to or modify the SQL Server source database.
+
 ## Run it
 
 Right-click **Install-SuiteCRM-Windows11.bat** and approve the administrator prompt, or from an elevated PowerShell:
