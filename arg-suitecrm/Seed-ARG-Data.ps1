@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-  Fill SuiteCRM with a fictional American Refining Group sales book.
+  Fill SuiteCRM with a fictional sales book.
 
 .DESCRIPTION
   Run this after Install-SuiteCRM-Windows11.ps1. It does not need Administrator.

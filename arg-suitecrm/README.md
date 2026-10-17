@@ -1,9 +1,9 @@
-# SuiteCRM 8.10 on Windows 11, with an American Refining Group demo book
+# SuiteCRM 8.10 on Windows 11
 
 Two scripts:
 
 1. `Install-SuiteCRM-Windows11.ps1` installs SuiteCRM.
-2. `Seed-ARG-Data.ps1` loads a fictional sales book shaped like American Refining Group.
+2. `Seed-ARG-Data.ps1` loads a fictional sales book.
 
 ## Why it uses WSL2
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * Load a fictional American Refining Group sales book into SuiteCRM 8.10.
+ * Load a fictional sales book into SuiteCRM 8.10.
  *
  * Accounts, contacts, prices, volumes, and the sales staff marked fictional
  * are made up. They illustrate the public ARG business: Bradford, PA refinery,
@@ -161,7 +161,7 @@ $admin->address_city = 'Bradford';
 $admin->address_state = 'PA';
 $admin->address_postalcode = '16701';
 $admin->address_country = 'USA';
-$admin->description = 'Local administrator for the American Refining Group demo CRM. Change this password after signing in.';
+$admin->description = 'Local administrator for the demo CRM. Change this password after signing in.';
 $admin->employee_status = 'Active';
 $admin->status = 'Active';
 $admin->save(false);

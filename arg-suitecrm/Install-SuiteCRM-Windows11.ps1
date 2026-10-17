@@ -12,7 +12,7 @@
   Run from an elevated PowerShell:
     powershell -NoProfile -ExecutionPolicy Bypass -File .\Install-SuiteCRM-Windows11.ps1
 
-  After it finishes, run Seed-ARG-Data.ps1 to load the American Refining Group demo data.
+  After it finishes, run Seed-ARG-Data.ps1 to load the demo data.
 #>
 [CmdletBinding()]
 param(
@@ -284,7 +284,7 @@ Write-Host "Passwords file:  $credPath"
 Write-Host "After reboot:    $start"
 Write-Host ""
 Write-Host "Change the admin password after you log in. Do not expose this machine to the internet."
-Write-Host "Next, load the American Refining Group demo data:"
+Write-Host "Next, load the :"
 Write-Host "    powershell -NoProfile -ExecutionPolicy Bypass -File `"$((Join-Path $here 'Seed-ARG-Data.ps1'))`""
 
 if ($Seed) {

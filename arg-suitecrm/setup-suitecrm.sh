@@ -247,7 +247,7 @@ install_app() {
 
   cat > "$INSTALL_DIR/public/legacy/config_override.php" <<'PHP'
 <?php
-$sugar_config['system_name'] = 'American Refining Group';
+$sugar_config['system_name'] = 'ARG';
 $sugar_config['default_currency_iso4217'] = 'USD';
 $sugar_config['default_currency_name'] = 'US Dollars';
 $sugar_config['default_currency_symbol'] = '$';
